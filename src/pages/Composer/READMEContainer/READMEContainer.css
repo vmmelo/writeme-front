@@ -1,0 +1,33 @@
+.READMEContainer {
+  border: 1px solid lightgray;
+  background-color: white;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding-left: 20px;
+  padding-right: 20px;
+  margin-left: 40px;
+}
+
+.READMEContainer > #READMEcontent {
+  text-align: left;
+}
+
+#READMEcontent h2 {
+  margin-bottom: 10px;
+  margin-top: 30px;
+}
+
+.READMEContainer button {
+  align-self: flex-end;
+  margin-right: -20px;
+  font-size: 1rem;
+  background-color: transparent;
+  border: 1px solid lightgray;
+  cursor: pointer;
+  color: #666;
+  padding: 5px 10px 5px 10px;
+  outline-color: #666;
+  outline-width: 2px;
+}
