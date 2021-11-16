@@ -63,7 +63,7 @@ class TypeSectionContainer extends React.Component {
       const groupedChildren = computeFrequencyByLevel(children);
       desiredChildren = groupedChildren[desiredChildrenLevel - 1]; // starts on 0
     }
-    console.log(desiredChildren);
+
     return (
       <div className="section" key={`${section.sectionTitle}-${section[1]}`}>
         <h2 className={className}>
@@ -127,7 +127,6 @@ TypeSectionContainer.propTypes = {
       section_id: PropTypes.string.isRequired,
     }),
   ),
-  language: PropTypes.string.isRequired,
 };
 
 TypeSectionContainer.defaultProps = {

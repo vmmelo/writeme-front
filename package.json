@@ -60,7 +60,7 @@
   "husky": {
     "hooks": {
       "pre-commit": "lint-staged",
-      "pre-push": "if git-branch-is master; then npm run deploy; fi"
+      "pre-push": "if git-branch-is main; then npm run deploy; fi"
     }
   }
 }

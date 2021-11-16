@@ -1,7 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import {
-  Switch, Route, BrowserRouter,
+  Switch, Route, HashRouter,
 } from 'react-router-dom';
 import ReactGA from 'react-ga';
 import './index.css';
@@ -15,12 +15,12 @@ function App() {
   ReactGA.pageview('/');
 
   return (
-    <BrowserRouter onUpdate={() => window.scrollTo(0, 0)}>
+    <HashRouter basename={`${process.env.PUBLIC_URL}/`} onUpdate={() => window.scrollTo(0, 0)}>
       <Switch>
         <Route path="/" exact component={About} />
         <Route path="/composer/:language" component={Composer} />
       </Switch>
-    </BrowserRouter>
+    </HashRouter>
   );
 }
 
