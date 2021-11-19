@@ -6,6 +6,8 @@ import About from '../About/About';
 import SuggestionsContainer from './SuggestionsContainer/SuggestionsContainer';
 import READMEContainer from './READMEContainer/READMEContainer';
 import isEqual from '../../common/Extensions';
+import { alertError } from '../../common/alerts';
+import Loading from '../../common/loading.jsx';
 
 class Composer extends React.Component {
   constructor(props) {
@@ -34,21 +36,12 @@ class Composer extends React.Component {
           });
         },
         (error) => {
-          // console.error(error);
+          alertError('Language not processed yet', 'Please, try again in a few minutes while the language is been processed.');
+          console.error(error);
           this.setState({
             treesLoaded: true,
             trees: {},
           });
-          fetch(`${process.env.REACT_APP_BACKEND_URL}${language}`)
-            .then(res => res.body)
-            .then(
-              (result) => {
-                alert('Data was not found. Please, try again in a few minutes while the language is been processed.');
-              },
-              (error) => {
-                alert('Could not connect to WRITEME server');
-              },
-            );
         },
       );
 
@@ -62,10 +55,22 @@ class Composer extends React.Component {
           });
         },
         (error) => {
+          console.error(error);
+          alertError('Language not processed yet', 'Please, try again in a few minutes while the language is been processed.');
           this.setState({
             sectionsLoaded: true,
             sections: [],
           });
+        },
+      );
+
+    fetch(`${process.env.REACT_APP_BACKEND_URL}${language}`)
+      .then(res => res.body)
+      .then(
+        () => {},
+        (error) => {
+          console.error(error);
+          alertError(false, 'Could not connect to WRITEME server');
         },
       );
   }
@@ -91,13 +96,18 @@ class Composer extends React.Component {
   }
 
   render() {
-    const { selectedSections, trees, sections } = this.state;
+    const {
+      selectedSections, trees, sections, sectionsLoaded, treesLoaded,
+    } = this.state;
     const { match: { params: { language } } } = this.props;
+    const loading = !sectionsLoaded || !treesLoaded;
     const numRepos = Object.keys(trees).length;
 
     return (
       <div key={this.ref}>
         <About numRepos={`${numRepos}`} />
+        <Loading hide={!loading} className="Composer" />
+        {!loading && (
         <div className="Composer">
           <SuggestionsContainer
             sections={sections}
@@ -107,6 +117,7 @@ class Composer extends React.Component {
           />
           <READMEContainer selectedSections={selectedSections} />
         </div>
+        )}
       </div>
     );
   }
