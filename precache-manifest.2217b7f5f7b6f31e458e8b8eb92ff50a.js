@@ -1,10 +1,10 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "8e738968e0412647ffbb8a6b166218a2",
+    "revision": "164551dacf5ca98d252d99be4f326245",
     "url": "/writeme-front/index.html"
   },
   {
-    "revision": "8dc7dd058096459cd605",
+    "revision": "0ade1eb94a32e9491bf4",
     "url": "/writeme-front/static/css/main.868b3da0.chunk.css"
   },
   {
@@ -16,8 +16,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/writeme-front/static/js/2.a10a6027.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "8dc7dd058096459cd605",
-    "url": "/writeme-front/static/js/main.b535d72c.chunk.js"
+    "revision": "0ade1eb94a32e9491bf4",
+    "url": "/writeme-front/static/js/main.a5f69abf.chunk.js"
   },
   {
     "revision": "3c5b182ecbeda61d0c05",

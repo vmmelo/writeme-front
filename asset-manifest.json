@@ -1,14 +1,14 @@
 {
   "files": {
     "main.css": "/writeme-front/static/css/main.868b3da0.chunk.css",
-    "main.js": "/writeme-front/static/js/main.b535d72c.chunk.js",
-    "main.js.map": "/writeme-front/static/js/main.b535d72c.chunk.js.map",
+    "main.js": "/writeme-front/static/js/main.a5f69abf.chunk.js",
+    "main.js.map": "/writeme-front/static/js/main.a5f69abf.chunk.js.map",
     "runtime-main.js": "/writeme-front/static/js/runtime-main.2705e149.js",
     "runtime-main.js.map": "/writeme-front/static/js/runtime-main.2705e149.js.map",
     "static/js/2.a10a6027.chunk.js": "/writeme-front/static/js/2.a10a6027.chunk.js",
     "static/js/2.a10a6027.chunk.js.map": "/writeme-front/static/js/2.a10a6027.chunk.js.map",
     "index.html": "/writeme-front/index.html",
-    "precache-manifest.d8500ccef543d90d4f9ad5b541718d2c.js": "/writeme-front/precache-manifest.d8500ccef543d90d4f9ad5b541718d2c.js",
+    "precache-manifest.2217b7f5f7b6f31e458e8b8eb92ff50a.js": "/writeme-front/precache-manifest.2217b7f5f7b6f31e458e8b8eb92ff50a.js",
     "service-worker.js": "/writeme-front/service-worker.js",
     "static/css/main.868b3da0.chunk.css.map": "/writeme-front/static/css/main.868b3da0.chunk.css.map",
     "static/js/2.a10a6027.chunk.js.LICENSE.txt": "/writeme-front/static/js/2.a10a6027.chunk.js.LICENSE.txt"
@@ -17,6 +17,6 @@
     "static/js/runtime-main.2705e149.js",
     "static/js/2.a10a6027.chunk.js",
     "static/css/main.868b3da0.chunk.css",
-    "static/js/main.b535d72c.chunk.js"
+    "static/js/main.a5f69abf.chunk.js"
   ]
 }
