@@ -119,7 +119,6 @@ function About(props) {
             <b>
               If you can't find some language, please open a new issue on our &nbsp;
               <a href="https://github.com/hpbl/WRITEME" target="_blank" rel="noopener noreferrer">
-                {' '}
                 Github
                 repository
               </a>
