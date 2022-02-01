@@ -1,4 +1,6 @@
- This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+os arquivos da build devem ser salvos no servidor em /var/www/html
+
+This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
 

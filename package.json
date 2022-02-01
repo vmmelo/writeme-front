@@ -2,7 +2,7 @@
   "name": "readme-assist-tool",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://vmmelo.github.io/writeme-front/",
+  "homepage": "https://vmmelo.github.io/writeme/",
   "dependencies": {
     "eslint": "^6.6.0",
     "husky": "^2.4.0",
