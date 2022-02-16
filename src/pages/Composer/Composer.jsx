@@ -6,7 +6,7 @@ import About from '../About/About';
 import SuggestionsContainer from './SuggestionsContainer/SuggestionsContainer';
 import READMEContainer from './READMEContainer/READMEContainer';
 import isEqual from '../../common/Extensions';
-import { alertError } from '../../common/alerts';
+import { alertError, alertInfo } from '../../common/alerts';
 import Loading from '../../common/loading.jsx';
 
 class Composer extends React.Component {
@@ -36,7 +36,7 @@ class Composer extends React.Component {
           });
         },
         (error) => {
-          alertError('Language not processed yet', 'Please, try again in a few minutes while the language is been processed.');
+          alertInfo('Language not processed yet', 'Please, try again in a few minutes (≈ 15 min) while the language is been processed.');
           console.error(error);
           this.setState({
             treesLoaded: true,
@@ -56,7 +56,7 @@ class Composer extends React.Component {
         },
         (error) => {
           console.error(error);
-          alertError('Language not processed yet', 'Please, try again in a few minutes while the language is been processed.');
+          alertInfo('Language not processed yet', 'Please, try again in a few minutes (≈ 15 min) while the language is been processed.');
           this.setState({
             sectionsLoaded: true,
             sections: [],
