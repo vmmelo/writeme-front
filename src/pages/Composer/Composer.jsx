@@ -26,7 +26,7 @@ class Composer extends React.Component {
 
   componentDidMount() {
     const { match: { params: { language } } } = this.props;
-    fetch(`${process.env.REACT_APP_BACKEND_URL}files/trees/${language}`)
+    fetch(`${process.env.REACT_APP_BUCKET_BASE_URL}trees_${language.toLowerCase()}.json`)
       .then(res => res.json())
       .then(
         (result) => {
@@ -45,7 +45,7 @@ class Composer extends React.Component {
         },
       );
 
-    fetch(`${process.env.REACT_APP_BACKEND_URL}files/sections/${language}`)
+    fetch(`${process.env.REACT_APP_BUCKET_BASE_URL}sections_${language.toLowerCase()}.json`)
       .then(res => res.json())
       .then(
         (result) => {
@@ -64,13 +64,12 @@ class Composer extends React.Component {
         },
       );
 
-    fetch(`${process.env.REACT_APP_BACKEND_URL}${language}`)
+    fetch(`${process.env.REACT_APP_BACKEND_URL}${language.toLowerCase()}`)
       .then(res => res.body)
       .then(
         () => {},
         (error) => {
           console.error(error);
-          alertError(false, 'Could not connect to WRITEME server');
         },
       );
   }
