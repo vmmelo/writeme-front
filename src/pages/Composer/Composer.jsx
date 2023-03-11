@@ -63,8 +63,12 @@ class Composer extends React.Component {
           });
         },
       );
-
-    fetch(`${process.env.REACT_APP_BACKEND_URL}${language.toLowerCase()}`)
+    const requestOptions = {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ language: language.toLowerCase() }),
+    };
+    fetch(`${process.env.REACT_APP_BACKEND_URL}}`, requestOptions)
       .then(res => res.body)
       .then(
         () => {},
