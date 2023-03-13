@@ -68,7 +68,7 @@ class Composer extends React.Component {
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify({ language: language.toLowerCase() }),
     };
-    fetch(`${process.env.REACT_APP_BACKEND_URL}}`, requestOptions)
+    fetch(`${process.env.REACT_APP_BACKEND_URL}`, requestOptions)
       .then(res => res.body)
       .then(
         () => {},
